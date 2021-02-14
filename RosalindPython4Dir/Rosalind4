@@ -1,0 +1,36 @@
+#!/usr/bin/python
+import re
+import subprocess
+
+subprocess.call("./textReader")
+
+myFileObj = open(r"Output.txt","r")
+myFile = myFileObj.read()
+myTextObj = open(myFile.strip(),"r")
+myText = myTextObj.read()
+myText = myText.strip()
+myPattern = re.compile(r'(\d+) (\d+)')
+
+nums = myPattern.search(myText)
+if nums:
+    num1 = int(nums.group(1))
+    num2 = int(nums.group(2))
+
+    counter = num1
+    sum = 0
+
+    for counter in range(num1, num2+1):
+        if counter % 2 == 1:
+            sum += counter
+            counter += 1
+        elif counter % 2 == 0:
+            counter += 1
+        else:
+            print("Erorrrrr")
+else:
+    print("Error!")
+
+print(sum)
+
+myTextObj.close()
+myFileObj.close()

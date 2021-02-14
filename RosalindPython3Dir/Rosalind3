@@ -1,0 +1,11 @@
+#!/usr/bin/python
+import subprocess
+subprocess.call("./textReader")
+
+outputObj = open(r"../Output.txt", "r")
+myLocation = outputObj.read()
+problemFileObj = open(myLocation.strip(), "r")
+print problemFileObj.read()
+
+problemFileObj.close()
+outputObj.close()

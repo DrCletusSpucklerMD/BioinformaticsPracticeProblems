@@ -1,0 +1,26 @@
+#!/usr/bin/python
+import re
+import subprocess
+
+
+
+subprocess.call("./TextReader")
+
+with open(r"Output.txt", "r") as f:
+    f_contents = f.read()
+    with open(f_contents.strip(), "r") as g:
+        text = g.read()
+
+        words = text.split(" ")
+        for i in words:
+            word = re.match('and',i)
+            #myPattern = pattern.search('(?<=a)a',i)
+            #wordList = myPattern.group(0)
+            print(word)
+
+            #myPattern = myPattern.search(pattern)
+
+
+
+
+
