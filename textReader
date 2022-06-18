@@ -1,0 +1,4 @@
+#!/bin/bash
+find /Users/helenatubb/Downloads -name "rosalind_*" | sort -V > OutputTemp.txt
+tail -1 OutputTemp.txt > Output.txt
+rm OutputTemp.txt
