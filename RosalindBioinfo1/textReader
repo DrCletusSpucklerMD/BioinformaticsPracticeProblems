@@ -1,4 +1,0 @@
-#!/bin/bash
-find /Users/helenatubb/Downloads -name "rosalind_rna*" | sort -V > OutputTemp.txt
-tail -1 OutputTemp.txt > Output.txt
-rm OutputTemp.txt

@@ -4,7 +4,7 @@ import subprocess
 import numpy
 import sys
 
-subprocess.call("./TextReader")
+subprocess.call("./textReader")
 
 with open(r"Output.txt", "r") as f:
     f_contents = f.read()

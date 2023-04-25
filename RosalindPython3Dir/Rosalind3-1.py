@@ -5,7 +5,7 @@ import subprocess
 
 subprocess.call("./textReader")
 
-outputObj = open(r"../Output.txt", "r")
+outputObj = open(r"../RosalindPython5Dir/Output.txt", "r")
 myLocation = outputObj.read()
 myLocationObj = open(myLocation.strip(), "r")
 text = myLocationObj.read()
