@@ -1,4 +1,0 @@
-#!/bin/bash
-find /Users/helenatubb/Downloads -exec stat -f '%m%t%Sm %N' {} + | sort -nr | cut -f2- > OutputTemp.txt
-head -1 OutputTemp.txt > Output.txt
-rm OutputTemp.txt
